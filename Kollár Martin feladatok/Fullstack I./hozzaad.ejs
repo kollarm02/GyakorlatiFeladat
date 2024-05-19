@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fesztivál</title>
+  <style>
+    body{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    div{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      border-radius: 10px;
+      padding-bottom: 20px;
+      margin: 10px;
+      background-color: #007ff0;
+      text-align: center;
+    }
+    button{
+      border-radius: 10px;
+      background-color: #0cf;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    input{ 
+      border-radius: 6px;
+      width: 95%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    nav {
+      background-color:  #74b0ff; /* háttérszín */
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      display: inline-block; /* Módosítás: blokkok egymás mellé */
+    }
+
+    li a {
+      display: block;
+      color: black;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    svg{
+      width: 40px;
+    }
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+    }
+    form input{
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+        <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+      </svg>Festivals</li>
+      <li><a href="http://localhost:3500/">Főoldal</a></li>
+      <li><a href="http://localhost:3500/fesztivalhozzaad">Fesztivál hozzáadása</a></li>
+      <li><a href="http://localhost:3500/fesztivalkiir">Fesztiváladatok</a></li>
+    </ul>
+  </nav>
+  
+  <div>
+    <h3>Adja hozzá a fesztivál jegy vásárlásához adatait</h3>
+    <form action="/fesztivalhozzaad" method="post">
+      <label for="nev">Név</label><br>
+      <input type="text" id="nev" name="nev" required placeholder="Adja meg a nevét">
+      <br>
+      <label for="szuletesi_datum">Születési dátum</label><br>
+      <input type="datetime-local" id="szuletesi_datum" name="szuletesi_datum" required placeholder="dd/mm/yyyy">
+      <br>
+      <label for="telefonszam">Telefonszám</label><br>
+      <input type="text" id="telefonszam" name="telefonszam" required placeholder="Adja meg a telefonszámát">
+      <br>
+      <label for="email">E-mail</label><br>
+      <input type="text" id="email" name="email" required placeholder="Adja meg az e-mail címét">
+      <br>
+      <label for="foglalt_napok_szama">Foglalt_napok_szama</label><br>
+      <input type="text" id="foglalt_napok_szama" name="foglalt_napok_szama" required placeholder="Adja meg a lefoglalt napok számát">
+      <br>
+      <label for="osszeg">Összeg</label><br>
+      <input type="text" id="osszeg" name="osszeg" required placeholder="Adja meg az összeget"><br>
+      <button type="submit">Küldés</button>
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <p>Készítette: Kollár Martin &copy;  2024</p>
+  </footer>
+</body>
+
+</html>
